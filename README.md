@@ -1,11 +1,11 @@
-Feed-ReaderTesting
-Project 6 - Udacity
+#Feed-Reader-Testing
+##Project 6 - Udacity
 
-A project for Front-End Web Developers
+##A project for Front-End Web Developers
 
 The objective of this project is to learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
-Installation and Use
+##Installation and Use
 
 Simply click on the link below to see Jasmine framework test the application:
 

@@ -30,13 +30,17 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */        
-        it('are defined', function() {
-			expect(urlFeeds).toBeDefined();
+        it('have a URL that is defined', function() {
+        	for(i = 0, l = allFeeds.length; i < l; i++) {
+				expect(allFeeds[i].url).toBeDefined();
+        	}
         });
 
-        it('do not have an empty URL', function() {
-        	console.log(urlFeeds);
-    		expect(urlFeeds).not.toContain('');
+        it('and do not have an empty URL', function() {
+        	for(i = 0, l = allFeeds.length; i < l; i++) {
+        		console.log(allFeeds[i].url);
+    			expect(allFeeds[i].url).not.toEqual('');
+        	}
 		});
         
         /* This test loops through each feed
@@ -44,12 +48,16 @@ $(function() {
          * and that the name is not empty.
          */
 		it('have a name that is defined', function() {
-			expect(nameFeeds).toBeDefined();
+       		for(i = 0, l = allFeeds.length; i < l; i++) {
+				expect(allFeeds[i].name).toBeDefined();
+        	}
     	});
 
-        it('do not have an empty name', function() {
-        	console.log(nameFeeds);
-        	expect(nameFeeds).not.toContain('');
+        it('and do not have an empty name', function() {
+        	for(i = 0, l = allFeeds.length; i < l; i++) {
+        		console.log(allFeeds[i].name);
+    			expect(allFeeds[i].name).not.toEqual('');
+        	}
     	});
     });
 
@@ -95,9 +103,8 @@ $(function() {
         });
 
         it('has at least a single .entry element within the .feed container', function() {
-
-            expect(testingPurposes).toBeDefined();
-            expect(testingPurposes).toBeGreaterThan(0);
+        	console.log($('.entry').length);
+            expect($('.entry').length).toBeGreaterThan(0);
         });
     });
 

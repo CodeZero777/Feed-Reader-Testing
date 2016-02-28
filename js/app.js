@@ -23,6 +23,21 @@ var allFeeds = [
     }
 ];
 
+/* This is for testing purposes on feedreader.js file, which
+ * loops through each feed
+ * in the allFeeds object and ensures it has a defined url and
+ * name and that the url and name properties are not empty.
+ */
+ var urlFeeds = [];
+ var nameFeeds = [];
+
+ for(i = 0; i < allFeeds.length; i++) {
+    var feed = allFeeds[i];
+    urlFeeds.push(feed.url);
+    nameFeeds.push(feed.name);
+ }
+/***************************************************/
+
 /* This function starts up our application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
  * function when the API is loaded.
@@ -41,8 +56,9 @@ function init() {
  * which will be called after everything has run successfully.
  */
 
- // holds the variable entriesLen value for testing purposes.
- var testingPurposes; 
+ // holds the value of the variable entriesLen for testing purposes.
+ var testingPurposes;
+ /**********************************************/
 
  function loadFeed(id, cb) {
      var feedUrl = allFeeds[id].url,
